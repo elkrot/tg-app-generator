@@ -18,7 +18,8 @@ Get-ChildItem $TemplateRoot -Recurse  -File |
 		$_.Name -like '*.css.tpl' -or
         $_.Name -like '*.json.tpl' -or
 		$_.Name -like '*.env'-or
-		$_.Name -like '*.local.tpl'	
+		$_.Name -like '.gitignore'-or
+		$_.Name -like '*.local'	
     } | ForEach-Object {
     # относительный путь
     $relativePath = $_.FullName.Substring($templatesFullPath.Length)

@@ -15,7 +15,8 @@
     "debug": "firebase emulators:start --inspect-functions --log-verbosity debug",
     "deploy": "npm run build && firebase deploy",
     "clean": "powershell -File ./clean.ps1",
-    "tailwind": "npx @tailwindcss/cli -i ./frontend/src/index.css -o ./frontend/src/dist.css --watch --workspace=frontend"
+    "tailwind": "npx @tailwindcss/cli -i ./frontend/src/index.css -o ./frontend/src/dist.css --watch --workspace=frontend",
+	"emulators": "firebase emulators:start --only functions,firestore"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
